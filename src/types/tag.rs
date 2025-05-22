@@ -288,6 +288,9 @@ impl Tag {
     pub fn bounding_box(&self) -> Rect {
         self.bounding_box
     }
+    pub fn tag_type(&self) -> &TagType {
+        &self.tag_type
+    }
 }
 
 /// Determines if a specified region of an image is selected based on pixel intensity.
