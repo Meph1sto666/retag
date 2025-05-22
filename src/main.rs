@@ -1,4 +1,5 @@
 use chrono::prelude::*;
+use image::RgbaImage;
 use leptess::tesseract;
 use opencv::{
     core::{self, VecN},
@@ -6,15 +7,18 @@ use opencv::{
     imgproc::{self, LINE_8},
     prelude::*,
 };
+use std::{thread, time::Duration};
 use std::{ffi::CString, fs, path::Path};
 use types::tag::{self, image_to_tags};
+use xcap::image;
+use xcap::Window;
 mod types;
 
-static ROI_VERTICAL: (f64, f64) = (
+static RECRUITMENT_ROI_VERTICAL: (f64, f64) = (
     0.45, // ignore top 45%
     0.30, // ignore bottom 30%
 );
-static ROI_HORIZONTAL: (f64, f64) = (
+static RECRUITMENT_ROI_HORIZONTAL: (f64, f64) = (
     0.3, // ignore left 30%
     0.3, // ignore right 30%
 );
@@ -50,7 +54,64 @@ fn draw_boxes(
     Ok(())
 }
 
-fn main() {}
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let mut tess: tesseract::TessApi = tesseract::TessApi::new(Some("/usr/share/tessdata"), "eng")?; //Tesseract::new(Some("path/to/tessdata"), Some("eng")).unwrap();
+    let key_cstr: CString = CString::new("tessedit_char_whitelist").expect("CString::new failed");
+    let value_cstr: CString = CString::new("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-")
+        .expect("CString::new failed");
+    tess.raw.set_variable(&key_cstr, &value_cstr)?;
+
+    let windows: Vec<Window> = Window::all().unwrap();
+    let window: &Window = windows
+        .iter()
+        .filter(|w| {
+            if w.is_minimized().unwrap() || !w.title().unwrap().contains("Arknights") {
+                false
+            } else {
+                true
+            }
+        })
+        .collect::<Vec<&Window>>()
+        .get(0)
+        .unwrap();
+
+    loop {
+        let image: image::ImageBuffer<image::Rgba<u8>, Vec<u8>> = window.capture_image().unwrap();
+        let mut converted: Mat = Mat::default();
+        imgproc::cvt_color_def(&into_mat(&image), &mut converted, imgproc::COLOR_RGBA2BGR)?;
+
+        let r: core::Rect_<i32> = core::Rect::new(
+            (converted.cols() as f64 * 0.3) as i32,
+            (converted.rows() as f64 * RECRUITMENT_ROI_VERTICAL.0) as i32,
+            (converted.cols() as f64 * 0.35) as i32,
+            (converted.rows() as f64 * 0.25) as i32,
+        );
+
+        let cropped: Mat = Mat::roi(&converted, r).unwrap().try_clone().unwrap();
+        let mut tags: Vec<tag::Tag> = image_to_tags(&cropped, &mut tess)?;
+        tags.sort_by(|t1, t2| {
+            t1.tag_type().to_string().cmp(&t2.tag_type().to_string())
+        });
+
+        for tag in tags {
+            println!("tag: [{:15}] / selected: [{:5}]", tag.tag_type().to_string().as_str(), tag.selected());
+        }
+        print!("{esc}c", esc = 27 as char);
+        thread::sleep(Duration::new(1, 0));
+    }
+}
+
+fn into_mat(image: &RgbaImage) -> Mat {
+    unsafe {
+        Mat::new_rows_cols_with_data_unsafe_def(
+            image.height() as i32,
+            image.width() as i32,
+            opencv::core::CV_8UC4,
+            image.as_raw().clone().as_mut_ptr() as *mut _,
+        )
+        .unwrap()
+    }
+}
 
 #[test]
 fn main_test() -> Result<(), Box<dyn std::error::Error>> {

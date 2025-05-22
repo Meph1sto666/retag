@@ -8,6 +8,7 @@ chrono = "0.4.41"
 difflib = "0.4.0"
 leptess = "0.14.0"
 opencv = { version = "0.94.4", features = ["clang-runtime"] }
+xcap = "0.6.0"
 
 [profile.release]
 debug = true
