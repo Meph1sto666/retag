@@ -7,6 +7,7 @@ use opencv::{
     imgproc::{self, CHAIN_APPROX_SIMPLE},
     prelude::MatTraitConst,
 };
+use xcap::image::RgbaImage;
 
 static RECRUITMENT_ROI_VERTICAL: (f64, f64) = (
     0.45, // ignore top 45%
@@ -135,6 +136,41 @@ impl ToString for TagType {
             Self::TopOperator => "Top-Operator".into(),
         }
     }
+}
+
+impl Clone for TagType {
+	fn clone(&self) -> Self {
+		match self {
+			Self::Medic => Self::Medic,
+			Self::Caster => Self::Caster,
+			Self::Vanguard => Self::Vanguard,
+			Self::Guard => Self::Guard,
+			Self::Defender => Self::Defender,
+			Self::Supporter => Self::Supporter,
+			Self::Melee => Self::Melee,
+			Self::Debuff => Self::Debuff,
+			Self::FastRedeploy => Self::FastRedeploy,
+			Self::Shift => Self::Shift,
+			Self::Summon => Self::Summon,
+			Self::Support => Self::Support,
+			Self::Survival => Self::Survival,
+			Self::Elemental => Self::Elemental,
+			Self::Ranged => Self::Ranged,
+			Self::DpRecovery => Self::DpRecovery,
+			Self::Starter => Self::Starter,
+			Self::Slow => Self::Slow,
+			Self::AoE => Self::AoE,
+			Self::Sniper => Self::Sniper,
+			Self::CrowdControl => Self::CrowdControl,
+			Self::Healing => Self::Healing,
+			Self::DPS => Self::DPS,
+			Self::Nuker => Self::Nuker,
+			Self::SeniorOperator => Self::SeniorOperator,
+			Self::Specialist => Self::Specialist,
+			Self::Robot => Self::Robot,
+			Self::TopOperator => Self::TopOperator,
+		}
+	}
 }
 
 /// Represents a tag detected in an image with associated properties.
@@ -662,4 +698,53 @@ fn tag_button_to_string(
     }
     let s: String = v.unwrap().to_string().clone();
     Ok(Some(s))
+}
+
+pub fn into_mat(image: &RgbaImage) -> Mat {
+    unsafe {
+        Mat::new_rows_cols_with_data_unsafe_def(
+            image.height() as i32,
+            image.width() as i32,
+            opencv::core::CV_8UC4,
+            image.as_raw().clone().as_mut_ptr() as *mut _,
+        )
+        .unwrap()
+    }
+}
+
+pub struct UiTag {
+    tag_type: TagType,
+    offset_x: i32,
+    offset_y: i32,
+    selected: bool,
+    bounding_box: Rect,
+}
+
+impl UiTag {
+    pub fn from_tag(tag: &Tag, off_x: i32, off_y: i32) -> Self {
+        UiTag {
+            tag_type: tag.tag_type.clone(),
+            offset_x: off_x,
+            offset_y: off_y,
+            bounding_box: tag.bounding_box,
+            selected: tag.selected,
+        }
+    }
+
+    /// get the bounding box with the offset applied
+    pub fn abs_bounding_box(&self) -> Rect {
+        Rect::new(
+            self.bounding_box.x + self.offset_x,
+            self.bounding_box.y + self.offset_y,
+            self.bounding_box.width,
+            self.bounding_box.height,
+        )
+    }
+
+	pub fn tag_type(&self) -> &TagType {
+		&self.tag_type
+	}
+	pub fn selected(&self) -> bool {
+		self.selected
+	}
 }
