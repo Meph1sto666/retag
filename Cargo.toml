@@ -6,6 +6,7 @@ edition = "2021"
 [dependencies]
 chrono = "0.4.41"
 difflib = "0.4.0"
+eframe = "0.31.1"
 leptess = "0.14.0"
 opencv = { version = "0.94.4", features = ["clang-runtime"] }
 xcap = "0.6.0"
