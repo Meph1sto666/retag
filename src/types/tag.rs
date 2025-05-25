@@ -554,7 +554,7 @@ fn detect_tag_boxes(grayscale: &Mat) -> Result<Vec<Rect>, Box<dyn std::error::Er
     imgproc::threshold(
         &grayscale,
         &mut threshed,
-        140.0,
+        160.0,
         255.0,
         imgproc::THRESH_BINARY_INV,
     )?;
