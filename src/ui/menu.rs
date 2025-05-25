@@ -139,6 +139,11 @@ impl eframe::App for MainMenu {
                     }) {
                         let window_name: Result<String, xcap::XCapError> = w.title();
                         if let Ok(name) = window_name {
+                            if self.window.is_none() {
+                                if name.contains("Arknights") || name.contains("arknights") {
+                                    self.window = Some(Arc::new(Mutex::new(w.clone())));
+                                }
+                            }
                             ui.selectable_value(
                                 &mut selected,
                                 name.clone(),
