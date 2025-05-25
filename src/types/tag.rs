@@ -9,6 +9,7 @@ use opencv::{
 };
 use xcap::image::RgbaImage;
 
+static COLOR_RGB: bool = true;
 static RECRUITMENT_ROI_VERTICAL: (f64, f64) = (
     0.45, // ignore top 45%
     0.30, // ignore bottom 30%
@@ -20,12 +21,13 @@ static RECRUITMENT_ROI_HORIZONTAL: (f64, f64) = (
 static MIN_TAG_BOX_SIZE: f64 = 0.005;
 static MAX_TAG_BOX_SIZE: f64 = 0.250;
 static SELECTED_ACCEPT_THRESH: f64 = 0.5;
-static TAGS_STRINGS: [&str; 28] = [
+static TAGS_STRINGS: [&str; 29] = [
     "Medic",
     "Caster",
     "Vanguard",
     "Guard",
     "Defender",
+    "Defense",
     "Supporter",
     "Melee",
     "Debuff",
@@ -58,6 +60,7 @@ pub enum TagType {
     Vanguard,
     Guard,
     Defender,
+    Defense,
     Supporter,
     Melee,
     Debuff,
@@ -111,6 +114,7 @@ impl ToString for TagType {
             Self::Vanguard => "Vanguard".into(),
             Self::Guard => "Guard".into(),
             Self::Defender => "Defender".into(),
+            Self::Defense => "Defense".into(),
             Self::Supporter => "Supporter".into(),
             Self::Melee => "Melee".into(),
             Self::Debuff => "Debuff".into(),
@@ -146,6 +150,7 @@ impl Clone for TagType {
 			Self::Vanguard => Self::Vanguard,
 			Self::Guard => Self::Guard,
 			Self::Defender => Self::Defender,
+			Self::Defense => Self::Defense,
 			Self::Supporter => Self::Supporter,
 			Self::Melee => Self::Melee,
 			Self::Debuff => Self::Debuff,
@@ -262,6 +267,7 @@ impl Tag {
             "Vanguard" => Ok(TagType::Vanguard),
             "Guard" => Ok(TagType::Guard),
             "Defender" => Ok(TagType::Defender),
+            "Defense" => Ok(TagType::Defense),
             "Supporter" => Ok(TagType::Supporter),
             "Melee" => Ok(TagType::Melee),
             "Debuff" => Ok(TagType::Debuff),
@@ -389,7 +395,7 @@ impl Tag {
 fn is_tag_region_selected(image: &Mat, rect: &Rect) -> Result<bool, Box<dyn std::error::Error>> {
     let cropped: opencv::boxed_ref::BoxedRef<'_, Mat> = image.roi(*rect)?;
     let total: f64 = opencv::core::sum_elems(&cropped)?
-        .get(0)
+        .get(if COLOR_RGB {2} else {0})
         .unwrap()
         .to_owned();
     Ok((total / 255.0 / cropped.size().unwrap().area() as f64) >= SELECTED_ACCEPT_THRESH)
@@ -723,11 +729,11 @@ pub struct UiTag {
 impl UiTag {
     pub fn from_tag(tag: &Tag, off_x: i32, off_y: i32) -> Self {
         UiTag {
-            tag_type: tag.tag_type.clone(),
+            tag_type: tag.tag_type().clone(),
             offset_x: off_x,
             offset_y: off_y,
-            bounding_box: tag.bounding_box,
-            selected: tag.selected,
+            bounding_box: tag.bounding_box(),
+            selected: tag.selected(),
         }
     }
 
