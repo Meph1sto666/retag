@@ -1,6 +1,6 @@
 use crate::types::tag::UiTag;
 use eframe::{
-    egui::{self, Color32, Pos2, Stroke, ViewportBuilder, ViewportId},
+    egui::{self, Align2, Color32, FontFamily, Pos2, Stroke, ViewportBuilder, ViewportId},
     App,
 };
 use std::sync::{Arc, Mutex};
@@ -40,7 +40,6 @@ impl Overlay {
 impl App for Overlay {
     fn update(&mut self, ctx: &eframe::egui::Context, _frame: &mut eframe::Frame) {
         let tags_clone: Arc<Mutex<Vec<UiTag>>> = self.tags.clone();
-        // let display = self.display_overlay;
         ctx.show_viewport_deferred(
             self.overlay_viewport_id,
             ViewportBuilder::default()
@@ -80,26 +79,24 @@ impl App for Overlay {
                                 rect,
                                 0,
                                 Color32::TRANSPARENT,
-                                Stroke::new(
-                                    2.0,
-                                    Color32::from_hex(if t.selected() {
-                                        "#00FFFF"
-                                    } else {
-                                        "#00FF00"
-                                    })
-                                    .unwrap(),
-                                ),
-                                egui::StrokeKind::Middle,
+                                Stroke::new(2.0, Color32::from_hex("#00FF00").unwrap()),
+                                egui::StrokeKind::Outside,
                             );
-                            ui.label(format!("{} / {}", t.tag_type().to_string(), t.selected()));
+                            ui.painter().text(
+                                rect.min,
+                                Align2::LEFT_BOTTOM,
+                                format!("{}", t.tag_type().to_string()),
+                                egui::FontId {
+                                    size: 16.0,
+                                    family: FontFamily::Monospace,
+                                },
+                                Color32::from_hex(if t.selected() { "#00ff00" } else { "#FF0000" })
+                                    .unwrap(),
+                            );
                         }
                     });
                 ctx.request_repaint();
             },
         );
-    }
-
-    fn clear_color(&self, _visuals: &egui::Visuals) -> [f32; 4] {
-        egui::Rgba::TRANSPARENT.to_array()
     }
 }

@@ -6,7 +6,7 @@ use std::{
 };
 
 use crate::types::tag::{image_to_tags, into_mat, UiTag};
-use eframe::egui::{self};
+use eframe::egui::{self, Color32};
 use egui::WidgetText;
 use leptess::tesseract;
 use xcap::{self, Window};
@@ -28,7 +28,7 @@ impl MainMenu {
             capture_active: Arc::new(Mutex::new(false)),
             window: None,
             tags: tag_arc.clone(),
-            capture_interval: Arc::new(AtomicU64::new(250)),
+            capture_interval: Arc::new(AtomicU64::new(500)),
             overlay: Overlay::new(&tag_arc),
         }
     }
@@ -85,7 +85,7 @@ impl MainMenu {
 }
 
 impl eframe::App for MainMenu {
-    fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
+    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         let mut selected: String = match &self.window {
             Some(window) => window
                 .lock()
@@ -96,7 +96,7 @@ impl eframe::App for MainMenu {
         };
 
         if self.overlay.display_overlay() {
-            self.overlay.update(ctx, frame);
+            self.overlay.update(ctx, _frame);
         }
 
         egui::CentralPanel::default().show(ctx, |ui: &mut egui::Ui| {
@@ -156,5 +156,8 @@ impl eframe::App for MainMenu {
                 }
             }
         });
+    }
+    fn clear_color(&self, _visuals: &egui::Visuals) -> [f32; 4] {
+        Color32::TRANSPARENT.to_normalized_gamma_f32()
     }
 }
