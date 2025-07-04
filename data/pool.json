@@ -1,0 +1,1868 @@
+[
+    {
+        "id": "char_285_medic2",
+        "name": "Lancet-2",
+        "rarity": "TIER_1",
+        "tag_list": [
+            "Robot",
+            "Healing",
+            "Medic",
+            "Ranged",
+            "Robot"
+        ],
+        "position": "RANGED",
+        "profession": "MEDIC"
+    },
+    {
+        "id": "char_286_cast3",
+        "name": "Castle-3",
+        "rarity": "TIER_1",
+        "tag_list": [
+            "Robot",
+            "Support",
+            "Guard",
+            "Melee",
+            "Robot"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_376_therex",
+        "name": "THRM-EX",
+        "rarity": "TIER_1",
+        "tag_list": [
+            "Robot",
+            "Nuker",
+            "Specialist",
+            "Melee",
+            "Robot"
+        ],
+        "position": "MELEE",
+        "profession": "SPECIAL"
+    },
+    {
+        "id": "char_4093_frston",
+        "name": "Friston-3",
+        "rarity": "TIER_1",
+        "tag_list": [
+            "Robot",
+            "Defense",
+            "Defender",
+            "Melee",
+            "Robot"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_4136_phonor",
+        "name": "PhonoR-0",
+        "rarity": "TIER_1",
+        "tag_list": [
+            "Robot",
+            "Elemental",
+            "Supporter",
+            "Ranged",
+            "Robot"
+        ],
+        "position": "RANGED",
+        "profession": "SUPPORT"
+    },
+    {
+        "id": "char_502_nblade",
+        "name": "Yato",
+        "rarity": "TIER_2",
+        "tag_list": [
+            "Starter",
+            "Melee",
+            "Starter"
+        ],
+        "position": "MELEE",
+        "profession": "PIONEER"
+    },
+    {
+        "id": "char_500_noirc",
+        "name": "Noir Corne",
+        "rarity": "TIER_2",
+        "tag_list": [
+            "Starter",
+            "Defender",
+            "Melee",
+            "Starter"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_503_rang",
+        "name": "Rangers",
+        "rarity": "TIER_2",
+        "tag_list": [
+            "Starter",
+            "Sniper",
+            "Ranged",
+            "Starter"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_501_durin",
+        "name": "Durin",
+        "rarity": "TIER_2",
+        "tag_list": [
+            "Starter",
+            "Ranged",
+            "Starter"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_009_12fce",
+        "name": "12F",
+        "rarity": "TIER_2",
+        "tag_list": [
+            "Starter",
+            "Ranged",
+            "Starter"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_123_fang",
+        "name": "Fang",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "DP-Recovery",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "PIONEER"
+    },
+    {
+        "id": "char_240_wyvern",
+        "name": "Vanilla",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "DP-Recovery",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "PIONEER"
+    },
+    {
+        "id": "char_192_falco",
+        "name": "Plume",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "DPS",
+            "DP-Recovery",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "PIONEER"
+    },
+    {
+        "id": "char_208_melan",
+        "name": "Melantha",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "DPS",
+            "Survival",
+            "Guard",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_281_popka",
+        "name": "Popukar",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "AoE",
+            "Survival",
+            "Guard",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_122_beagle",
+        "name": "Beagle",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "Defense",
+            "Defender",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_284_spot",
+        "name": "Spot",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "Defense",
+            "Healing",
+            "Defender",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_124_kroos",
+        "name": "Kroos",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "DPS",
+            "Sniper",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_211_adnach",
+        "name": "Adnachiel",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "DPS",
+            "Sniper",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_121_lava",
+        "name": "Lava",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "AoE",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_120_hibisc",
+        "name": "Hibiscus",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "Healing",
+            "Medic",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "MEDIC"
+    },
+    {
+        "id": "char_212_ansel",
+        "name": "Ansel",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "Healing",
+            "Medic",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "MEDIC"
+    },
+    {
+        "id": "char_210_stward",
+        "name": "Steward",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "DPS",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_278_orchid",
+        "name": "Orchid",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "Slow",
+            "Supporter",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "SUPPORT"
+    },
+    {
+        "id": "char_141_nights",
+        "name": "Haze",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "Debuff",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_109_fmout",
+        "name": "Gitano",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "AoE",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_253_greyy",
+        "name": "Greyy",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "AoE",
+            "Slow",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_328_cammou",
+        "name": "Click",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "Crowd-Control",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_235_jesica",
+        "name": "Jessica",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "Survival",
+            "Sniper",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_126_shotst",
+        "name": "Meteor",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "Debuff",
+            "Sniper",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_190_clour",
+        "name": "Vermeil",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "Sniper",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_133_mm",
+        "name": "May",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "Slow",
+            "Sniper",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_118_yuki",
+        "name": "Shirayuki",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "AoE",
+            "Slow",
+            "Sniper",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_440_pinecn",
+        "name": "Pinecone",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "AoE",
+            "DPS",
+            "Sniper",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_302_glaze",
+        "name": "Ambriel",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "Slow",
+            "Sniper",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_366_acdrop",
+        "name": "Aciddrop",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "Sniper",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_149_scave",
+        "name": "Scavenger",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DP-Recovery",
+            "DPS",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "PIONEER"
+    },
+    {
+        "id": "char_290_vigna",
+        "name": "Vigna",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "DP-Recovery",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "PIONEER"
+    },
+    {
+        "id": "char_151_myrtle",
+        "name": "Myrtle",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DP-Recovery",
+            "Healing",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "PIONEER"
+    },
+    {
+        "id": "char_130_doberm",
+        "name": "Dobermann",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "Support",
+            "Guard",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_289_gyuki",
+        "name": "Matoimaru",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Survival",
+            "DPS",
+            "Guard",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_193_frostl",
+        "name": "Frostleaf",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Slow",
+            "DPS",
+            "Guard",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_127_estell",
+        "name": "Estelle",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "AoE",
+            "Survival",
+            "Guard",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_185_frncat",
+        "name": "Mousse",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "Guard",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_301_cutter",
+        "name": "Cutter",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Nuker",
+            "DPS",
+            "Guard",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "Survival",
+            "Guard",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_271_spikes",
+        "name": "Arene",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "Guard",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_237_gravel",
+        "name": "Gravel",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Fast-Redeploy",
+            "Defense",
+            "Specialist",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "SPECIAL"
+    },
+    {
+        "id": "char_272_strong",
+        "name": "Jaye",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Fast-Redeploy",
+            "DPS",
+            "Specialist",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "SPECIAL"
+    },
+    {
+        "id": "char_236_rope",
+        "name": "Rope",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Shift",
+            "Specialist",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "SPECIAL"
+    },
+    {
+        "id": "char_117_myrrh",
+        "name": "Myrrh",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Healing",
+            "Medic",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "MEDIC"
+    },
+    {
+        "id": "char_298_susuro",
+        "name": "Sussurro",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Healing",
+            "Medic",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "MEDIC"
+    },
+    {
+        "id": "char_181_flower",
+        "name": "Perfumer",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Healing",
+            "Medic",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "MEDIC"
+    },
+    {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Healing",
+            "Support",
+            "Medic",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "MEDIC"
+    },
+    {
+        "id": "char_199_yak",
+        "name": "Matterhorn",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Defense",
+            "Defender",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_150_snakek",
+        "name": "Cuora",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Defense",
+            "Defender",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_381_bubble",
+        "name": "Bubble",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Defense",
+            "Defender",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_196_sunbr",
+        "name": "Gummy",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Defense",
+            "Healing",
+            "Defender",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_183_skgoat",
+        "name": "Earthspirit",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Slow",
+            "Supporter",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "SUPPORT"
+    },
+    {
+        "id": "char_258_podego",
+        "name": "Podenco",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Slow",
+            "Healing",
+            "Supporter",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "SUPPORT"
+    },
+    {
+        "id": "char_277_sqrrel",
+        "name": "Shaw",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "Shift",
+            "Specialist",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "SPECIAL"
+    },
+    {
+        "id": "char_128_plosis",
+        "name": "Ptilopsis",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Healing",
+            "Support",
+            "Medic",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "MEDIC"
+    },
+    {
+        "id": "char_115_headbr",
+        "name": "Zima",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DP-Recovery",
+            "Support",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "PIONEER"
+    },
+    {
+        "id": "char_102_texas",
+        "name": "Texas",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DP-Recovery",
+            "Crowd-Control",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "PIONEER"
+    },
+    {
+        "id": "char_349_chiave",
+        "name": "Chiave",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DP-Recovery",
+            "DPS",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "PIONEER"
+    },
+    {
+        "id": "char_261_sddrag",
+        "name": "Reed",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DP-Recovery",
+            "DPS",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "PIONEER"
+    },
+    {
+        "id": "char_401_elysm",
+        "name": "Elysium",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DP-Recovery",
+            "Support",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "PIONEER"
+    },
+    {
+        "id": "char_308_swire",
+        "name": "Swire",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "Support",
+            "Guard",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_155_tiger",
+        "name": "Indra",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "Survival",
+            "Guard",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_415_flint",
+        "name": "Flint",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "Guard",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_294_ayer",
+        "name": "Ayerscarpe",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "AoE",
+            "Guard",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_143_ghost",
+        "name": "Specter",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "AoE",
+            "Survival",
+            "Guard",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_356_broca",
+        "name": "Broca",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "AoE",
+            "Survival",
+            "Guard",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_274_astesi",
+        "name": "Astesia",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "Defense",
+            "Guard",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_129_bluep",
+        "name": "Blue Poison",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "Sniper",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_204_platnm",
+        "name": "Platinum",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "Sniper",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_367_swllow",
+        "name": "GreyThroat",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "Sniper",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_365_aprl",
+        "name": "April",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "Sniper",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_219_meteo",
+        "name": "Meteorite",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "AoE",
+            "Debuff",
+            "Sniper",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "AoE",
+            "Debuff",
+            "Sniper",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_279_excu",
+        "name": "Executor",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "AoE",
+            "Sniper",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_346_aosta",
+        "name": "Aosta",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "AoE",
+            "Sniper",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_344_beewax",
+        "name": "Beeswax",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "AoE",
+            "Defense",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_373_lionhd",
+        "name": "Leonhardt",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "AoE",
+            "Nuker",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_242_otter",
+        "name": "Mayer",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Summon",
+            "Crowd-Control",
+            "Supporter",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SUPPORT"
+    },
+    {
+        "id": "char_108_silent",
+        "name": "Silence",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Healing",
+            "Medic",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "MEDIC"
+    },
+    {
+        "id": "char_171_bldsk",
+        "name": "Warfarin",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Healing",
+            "Support",
+            "Medic",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "MEDIC"
+    },
+    {
+        "id": "char_436_whispr",
+        "name": "Whisperain",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Healing",
+            "Medic",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "MEDIC"
+    },
+    {
+        "id": "char_148_nearl",
+        "name": "Nearl",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Defense",
+            "Healing",
+            "Defender",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Defense",
+            "Healing",
+            "Defender",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_144_red",
+        "name": "Projekt Red",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Fast-Redeploy",
+            "Crowd-Control",
+            "Specialist",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "SPECIAL"
+    },
+    {
+        "id": "char_243_waaifu",
+        "name": "Waai Fu",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Fast-Redeploy",
+            "Debuff",
+            "Specialist",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "SPECIAL"
+    },
+    {
+        "id": "char_214_kafka",
+        "name": "Kafka",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Fast-Redeploy",
+            "Crowd-Control",
+            "Specialist",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "SPECIAL"
+    },
+    {
+        "id": "char_107_liskam",
+        "name": "Liskarm",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Defense",
+            "DPS",
+            "Defender",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_201_moeshd",
+        "name": "Croissant",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Defense",
+            "Shift",
+            "Defender",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_163_hpsts",
+        "name": "Vulcan",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Survival",
+            "Defense",
+            "DPS",
+            "Defender",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_378_asbest",
+        "name": "Asbestos",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Defense",
+            "DPS",
+            "Defender",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_145_prove",
+        "name": "Provence",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "Sniper",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_158_milu",
+        "name": "Firewatch",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "Nuker",
+            "Sniper",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_218_cuttle",
+        "name": "Andreana",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "Slow",
+            "Sniper",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_173_slchan",
+        "name": "Cliffheart",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Shift",
+            "DPS",
+            "Specialist",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "SPECIAL"
+    },
+    {
+        "id": "char_174_slbell",
+        "name": "Pramanix",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Debuff",
+            "Supporter",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SUPPORT"
+    },
+    {
+        "id": "char_254_vodfox",
+        "name": "Shamare",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Debuff",
+            "Supporter",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SUPPORT"
+    },
+    {
+        "id": "char_195_glassb",
+        "name": "Istina",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Slow",
+            "DPS",
+            "Supporter",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SUPPORT"
+    },
+    {
+        "id": "char_326_glacus",
+        "name": "Glaucus",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Slow",
+            "Crowd-Control",
+            "Supporter",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SUPPORT"
+    },
+    {
+        "id": "char_343_tknogi",
+        "name": "Tsukinogi",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Support",
+            "Survival",
+            "Supporter",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SUPPORT"
+    },
+    {
+        "id": "char_215_mantic",
+        "name": "Manticore",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "Survival",
+            "Specialist",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "SPECIAL"
+    },
+    {
+        "id": "char_241_panda",
+        "name": "FEater",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "Shift",
+            "Slow",
+            "Specialist",
+            "Melee",
+            "Senior-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "SPECIAL"
+    },
+    {
+        "id": "char_103_angel",
+        "name": "Exusiai",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "DPS",
+            "Sniper",
+            "Ranged",
+            "Top-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_340_shwaz",
+        "name": "Schwarz",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "DPS",
+            "Sniper",
+            "Ranged",
+            "Top-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_197_poca",
+        "name": "Rosa",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "DPS",
+            "Crowd-Control",
+            "Sniper",
+            "Ranged",
+            "Top-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_112_siege",
+        "name": "Siege",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "DP-Recovery",
+            "DPS",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "PIONEER"
+    },
+    {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "DP-Recovery",
+            "DPS",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "PIONEER"
+    },
+    {
+        "id": "char_134_ifrit",
+        "name": "Ifrit",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "AoE",
+            "Debuff",
+            "Ranged",
+            "Top-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_213_mostma",
+        "name": "Mostima",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "AoE",
+            "Support",
+            "Crowd-Control",
+            "Ranged",
+            "Top-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "DPS",
+            "Crowd-Control",
+            "Ranged",
+            "Top-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_358_lisa",
+        "name": "Suzuran",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "Slow",
+            "Support",
+            "DPS",
+            "Supporter",
+            "Ranged",
+            "Top-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SUPPORT"
+    },
+    {
+        "id": "char_248_mgllan",
+        "name": "Magallan",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "Support",
+            "Slow",
+            "DPS",
+            "Supporter",
+            "Ranged",
+            "Top-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SUPPORT"
+    },
+    {
+        "id": "char_250_phatom",
+        "name": "Phantom",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "Fast-Redeploy",
+            "Crowd-Control",
+            "DPS",
+            "Specialist",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "SPECIAL"
+    },
+    {
+        "id": "char_400_weedy",
+        "name": "Weedy",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "Shift",
+            "DPS",
+            "Crowd-Control",
+            "Specialist",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "SPECIAL"
+    },
+    {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "Support",
+            "DPS",
+            "Specialist",
+            "Ranged",
+            "Top-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "SPECIAL"
+    },
+    {
+        "id": "char_147_shining",
+        "name": "Shining",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "Healing",
+            "Support",
+            "Medic",
+            "Ranged",
+            "Top-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "MEDIC"
+    },
+    {
+        "id": "char_179_cgbird",
+        "name": "Nightingale",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "Healing",
+            "Support",
+            "Medic",
+            "Ranged",
+            "Top-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "MEDIC"
+    },
+    {
+        "id": "char_136_hsguma",
+        "name": "Hoshiguma",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "Defense",
+            "DPS",
+            "Defender",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_202_demkni",
+        "name": "Saria",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "Defense",
+            "Healing",
+            "Support",
+            "Defender",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_423_blemsh",
+        "name": "Blemishine",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "Defense",
+            "Healing",
+            "DPS",
+            "Defender",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_311_mudrok",
+        "name": "Mudrock",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "Survival",
+            "Defense",
+            "DPS",
+            "Defender",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_416_zumama",
+        "name": "Eunectes",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "DPS",
+            "Survival",
+            "Defense",
+            "Defender",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "TANK"
+    },
+    {
+        "id": "char_264_f12yin",
+        "name": "Mountain",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "DPS",
+            "Survival",
+            "Guard",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_172_svrash",
+        "name": "SilverAsh",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "DPS",
+            "Support",
+            "Guard",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_293_thorns",
+        "name": "Thorns",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "DPS",
+            "Defense",
+            "Guard",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_010_chen",
+        "name": "Ch'en",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "Nuker",
+            "DPS",
+            "Guard",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_017_huang",
+        "name": "Blaze",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "DPS",
+            "Survival",
+            "Guard",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_350_surtr",
+        "name": "Surtr",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "DPS",
+            "Guard",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_188_helage",
+        "name": "Hellagur",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "DPS",
+            "Survival",
+            "Guard",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_282_catap",
+        "name": "Catapult",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "AoE",
+            "Sniper",
+            "Ranged"
+        ],
+        "position": "RANGED",
+        "profession": "SNIPER"
+    },
+    {
+        "id": "char_283_midn",
+        "name": "Midnight",
+        "rarity": "TIER_3",
+        "tag_list": [
+            "DPS",
+            "Guard",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_137_brownb",
+        "name": "Beehunter",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "Guard",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_347_jaksel",
+        "name": "Jackie",
+        "rarity": "TIER_4",
+        "tag_list": [
+            "DPS",
+            "Guard",
+            "Melee"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    },
+    {
+        "id": "char_164_nightm",
+        "name": "Nightmare",
+        "rarity": "TIER_5",
+        "tag_list": [
+            "DPS",
+            "Healing",
+            "Slow",
+            "Ranged",
+            "Senior-Operator"
+        ],
+        "position": "RANGED",
+        "profession": "CASTER"
+    },
+    {
+        "id": "char_263_skadi",
+        "name": "Skadi",
+        "rarity": "TIER_6",
+        "tag_list": [
+            "DPS",
+            "Survival",
+            "Guard",
+            "Melee",
+            "Top-Operator"
+        ],
+        "position": "MELEE",
+        "profession": "WARRIOR"
+    }
+]

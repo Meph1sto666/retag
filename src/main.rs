@@ -1,5 +1,6 @@
 mod types;
 mod ui;
+mod core;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     eframe::run_native(

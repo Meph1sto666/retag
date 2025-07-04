@@ -8,6 +8,7 @@ use opencv::{
     prelude::MatTraitConst,
 };
 use xcap::image::RgbaImage;
+use serde::{Deserialize, Serialize};
 
 static COLOR_RGB: bool = true;
 static RECRUITMENT_ROI_VERTICAL: (f64, f64) = (
@@ -53,7 +54,7 @@ static TAGS_STRINGS: [&str; 29] = [
     "Top-Operator",
 ];
 
-#[derive(Debug)]
+#[derive(Debug, Deserialize, Serialize, PartialEq)]
 pub enum TagType {
     Medic,
     Caster,
@@ -64,6 +65,7 @@ pub enum TagType {
     Supporter,
     Melee,
     Debuff,
+    #[serde(rename="Fast-Redeploy")]
     FastRedeploy,
     Shift,
     Summon,
@@ -71,18 +73,22 @@ pub enum TagType {
     Survival,
     Elemental,
     Ranged,
+    #[serde(rename="DP-Recovery")]
     DpRecovery,
     Starter,
     Slow,
     AoE,
     Sniper,
+    #[serde(rename="Crowd-Control")]
     CrowdControl,
     Healing,
     DPS,
     Nuker,
+    #[serde(rename="Senior-Operator")]
     SeniorOperator,
     Specialist,
     Robot,
+    #[serde(rename="Top-Operator")]
     TopOperator,
 }
 
