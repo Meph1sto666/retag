@@ -7,8 +7,8 @@ use opencv::{
     imgproc::{self, CHAIN_APPROX_SIMPLE},
     prelude::MatTraitConst,
 };
-use xcap::image::RgbaImage;
 use serde::{Deserialize, Serialize};
+use xcap::image::RgbaImage;
 
 static COLOR_RGB: bool = true;
 static RECRUITMENT_ROI_VERTICAL: (f64, f64) = (
@@ -65,7 +65,7 @@ pub enum TagType {
     Supporter,
     Melee,
     Debuff,
-    #[serde(rename="Fast-Redeploy")]
+    #[serde(rename = "Fast-Redeploy")]
     FastRedeploy,
     Shift,
     Summon,
@@ -73,22 +73,22 @@ pub enum TagType {
     Survival,
     Elemental,
     Ranged,
-    #[serde(rename="DP-Recovery")]
+    #[serde(rename = "DP-Recovery")]
     DpRecovery,
     Starter,
     Slow,
     AoE,
     Sniper,
-    #[serde(rename="Crowd-Control")]
+    #[serde(rename = "Crowd-Control")]
     CrowdControl,
     Healing,
     DPS,
     Nuker,
-    #[serde(rename="Senior-Operator")]
+    #[serde(rename = "Senior-Operator")]
     SeniorOperator,
     Specialist,
     Robot,
-    #[serde(rename="Top-Operator")]
+    #[serde(rename = "Top-Operator")]
     TopOperator,
 }
 
@@ -149,39 +149,39 @@ impl ToString for TagType {
 }
 
 impl Clone for TagType {
-	fn clone(&self) -> Self {
-		match self {
-			Self::Medic => Self::Medic,
-			Self::Caster => Self::Caster,
-			Self::Vanguard => Self::Vanguard,
-			Self::Guard => Self::Guard,
-			Self::Defender => Self::Defender,
-			Self::Defense => Self::Defense,
-			Self::Supporter => Self::Supporter,
-			Self::Melee => Self::Melee,
-			Self::Debuff => Self::Debuff,
-			Self::FastRedeploy => Self::FastRedeploy,
-			Self::Shift => Self::Shift,
-			Self::Summon => Self::Summon,
-			Self::Support => Self::Support,
-			Self::Survival => Self::Survival,
-			Self::Elemental => Self::Elemental,
-			Self::Ranged => Self::Ranged,
-			Self::DpRecovery => Self::DpRecovery,
-			Self::Starter => Self::Starter,
-			Self::Slow => Self::Slow,
-			Self::AoE => Self::AoE,
-			Self::Sniper => Self::Sniper,
-			Self::CrowdControl => Self::CrowdControl,
-			Self::Healing => Self::Healing,
-			Self::DPS => Self::DPS,
-			Self::Nuker => Self::Nuker,
-			Self::SeniorOperator => Self::SeniorOperator,
-			Self::Specialist => Self::Specialist,
-			Self::Robot => Self::Robot,
-			Self::TopOperator => Self::TopOperator,
-		}
-	}
+    fn clone(&self) -> Self {
+        match self {
+            Self::Medic => Self::Medic,
+            Self::Caster => Self::Caster,
+            Self::Vanguard => Self::Vanguard,
+            Self::Guard => Self::Guard,
+            Self::Defender => Self::Defender,
+            Self::Defense => Self::Defense,
+            Self::Supporter => Self::Supporter,
+            Self::Melee => Self::Melee,
+            Self::Debuff => Self::Debuff,
+            Self::FastRedeploy => Self::FastRedeploy,
+            Self::Shift => Self::Shift,
+            Self::Summon => Self::Summon,
+            Self::Support => Self::Support,
+            Self::Survival => Self::Survival,
+            Self::Elemental => Self::Elemental,
+            Self::Ranged => Self::Ranged,
+            Self::DpRecovery => Self::DpRecovery,
+            Self::Starter => Self::Starter,
+            Self::Slow => Self::Slow,
+            Self::AoE => Self::AoE,
+            Self::Sniper => Self::Sniper,
+            Self::CrowdControl => Self::CrowdControl,
+            Self::Healing => Self::Healing,
+            Self::DPS => Self::DPS,
+            Self::Nuker => Self::Nuker,
+            Self::SeniorOperator => Self::SeniorOperator,
+            Self::Specialist => Self::Specialist,
+            Self::Robot => Self::Robot,
+            Self::TopOperator => Self::TopOperator,
+        }
+    }
 }
 
 /// Represents a tag detected in an image with associated properties.
@@ -401,7 +401,7 @@ impl Tag {
 fn is_tag_region_selected(image: &Mat, rect: &Rect) -> Result<bool, Box<dyn std::error::Error>> {
     let cropped: opencv::boxed_ref::BoxedRef<'_, Mat> = image.roi(*rect)?;
     let total: f64 = opencv::core::sum_elems(&cropped)?
-        .get(if COLOR_RGB {2} else {0})
+        .get(if COLOR_RGB { 2 } else { 0 })
         .unwrap()
         .to_owned();
     Ok((total / 255.0 / cropped.size().unwrap().area() as f64) >= SELECTED_ACCEPT_THRESH)
@@ -732,6 +732,18 @@ pub struct UiTag {
     bounding_box: Rect,
 }
 
+impl Clone for UiTag {
+    fn clone(&self) -> Self {
+        Self {
+            tag_type: self.tag_type.clone(),
+            offset_x: self.offset_x.clone(),
+            offset_y: self.offset_y.clone(),
+            selected: self.selected.clone(),
+            bounding_box: self.bounding_box.clone(),
+        }
+    }
+}
+
 impl UiTag {
     pub fn from_tag(tag: &Tag, off_x: i32, off_y: i32) -> Self {
         UiTag {
@@ -753,10 +765,10 @@ impl UiTag {
         )
     }
 
-	pub fn tag_type(&self) -> &TagType {
-		&self.tag_type
-	}
-	pub fn selected(&self) -> bool {
-		self.selected
-	}
+    pub fn tag_type(&self) -> &TagType {
+        &self.tag_type
+    }
+    pub fn selected(&self) -> bool {
+        self.selected
+    }
 }

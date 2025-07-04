@@ -1,17 +1,18 @@
 use std::{
     ffi::CString,
-    sync::{atomic::AtomicU64, Arc, Mutex},
+    sync::{Arc, Mutex, atomic::AtomicU64},
     thread,
     time::Duration,
 };
 
-use crate::types::tag::{image_to_tags, into_mat, UiTag};
+use crate::types::tag::{UiTag, image_to_tags, into_mat};
 use eframe::egui::{self, Color32};
 use egui::WidgetText;
 use leptess::tesseract;
 use xcap::{self, Window};
 
 use super::overlay::Overlay;
+use crate::core::calculator::Calculator;
 
 pub struct MainMenu {
     window: Option<Arc<Mutex<Window>>>,
@@ -24,12 +25,13 @@ pub struct MainMenu {
 impl MainMenu {
     pub fn new(_cc: &eframe::CreationContext<'_>) -> Self {
         let tag_arc: Arc<Mutex<Vec<UiTag>>> = Arc::new(Mutex::new(vec![]));
+        let calc_arc: Arc<Mutex<Calculator>> = Arc::new(Mutex::new(Calculator::new()));
         Self {
             capture_active: Arc::new(Mutex::new(false)),
             window: None,
             tags: tag_arc.clone(),
             capture_interval: Arc::new(AtomicU64::new(500)),
-            overlay: Overlay::new(&tag_arc),
+            overlay: Overlay::new(&tag_arc, &calc_arc.clone()),
         }
     }
 
@@ -95,7 +97,7 @@ impl eframe::App for MainMenu {
             None => "no window selected".to_string(),
         };
 
-        if self.overlay.display_overlay() {
+        if *self.overlay.display_overlay() {
             self.overlay.update(ctx, _frame);
         }
 
@@ -116,12 +118,12 @@ impl eframe::App for MainMenu {
                 self.overlay
                     .set_display_overlay(!self.overlay.display_overlay());
             }
-            if self.overlay.display_overlay() {
+            if *self.overlay.display_overlay() {
                 if ui.button("Toggle fullScreen").clicked() {
                     self.overlay.set_fullscreen(!self.overlay.fullscreen());
                     ctx.send_viewport_cmd_to(
                         self.overlay.overlay_viewport_id,
-                        egui::ViewportCommand::Fullscreen(self.overlay.fullscreen()),
+                        egui::ViewportCommand::Fullscreen(*self.overlay.fullscreen()),
                     );
                 }
             }

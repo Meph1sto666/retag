@@ -40,7 +40,10 @@ pub struct Operator {
 }
 
 impl Operator {
-    pub fn matches_tags(&self, tags: &Vec<&TagType>) -> bool {
+    pub fn matches_tags(&self, tags: &Vec<TagType>) -> bool {
+        if self.rarity == Rarity::Tier6 && !tags.contains(&TagType::TopOperator) {
+            return false;
+        }
         tags.iter().all(|tag| self.tag_list.contains(tag))
     }
 }

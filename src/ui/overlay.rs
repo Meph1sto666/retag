@@ -1,45 +1,40 @@
-use crate::types::tag::UiTag;
+use crate::{core::calculator::Calculator, types::tag::UiTag};
 use eframe::{
-    egui::{self, Align2, Color32, FontFamily, Pos2, Stroke, ViewportBuilder, ViewportId},
     App,
+    egui::{self, Align2, Color32, FontFamily, Pos2, Stroke, ViewportBuilder, ViewportId},
 };
+use getset::{Getters, Setters};
 use std::sync::{Arc, Mutex};
 
+#[derive(Getters, Setters)]
+#[get = "pub"]
+#[set = "pub"]
 pub struct Overlay {
     tags: Arc<Mutex<Vec<UiTag>>>,
     pub(super) overlay_viewport_id: ViewportId,
     display_overlay: bool,
     fullscreen: bool,
+    calculator: Arc<Mutex<Calculator>>,
 }
 
 impl Overlay {
-    pub fn new(tags: &Arc<Mutex<Vec<UiTag>>>) -> Self {
-        let tag_clone: Arc<Mutex<Vec<UiTag>>> = Arc::clone(tags);
+    pub fn new(tags: &Arc<Mutex<Vec<UiTag>>>, calculator: &Arc<Mutex<Calculator>>) -> Self {
+        let tag_clone: Arc<Mutex<Vec<UiTag>>> = tags.clone();
+        let calc_clone: Arc<Mutex<Calculator>> = calculator.clone();
         Self {
             tags: tag_clone,
+            calculator: calc_clone,
             overlay_viewport_id: ViewportId::from_hash_of("Overlay"),
             display_overlay: false,
             fullscreen: false,
         }
-    }
-
-    pub(super) fn display_overlay(&self) -> bool {
-        self.display_overlay
-    }
-    pub(super) fn set_display_overlay(&mut self, display: bool) {
-        self.display_overlay = display;
-    }
-    pub(super) fn fullscreen(&self) -> bool {
-        self.fullscreen
-    }
-    pub(super) fn set_fullscreen(&mut self, fs: bool) {
-        self.fullscreen = fs;
     }
 }
 
 impl App for Overlay {
     fn update(&mut self, ctx: &eframe::egui::Context, _frame: &mut eframe::Frame) {
         let tags_clone: Arc<Mutex<Vec<UiTag>>> = self.tags.clone();
+        let calc_clone: Arc<Mutex<Calculator>> = self.calculator.clone();
         ctx.show_viewport_deferred(
             self.overlay_viewport_id,
             ViewportBuilder::default()
@@ -94,9 +89,17 @@ impl App for Overlay {
                                     .unwrap(),
                             );
                         }
+
+                        for res in calc_clone.lock().unwrap().evaluate(tags_clone.clone()) {
+                            ui.label(format!("{:?}", res));
+                        }
                     });
                 ctx.request_repaint();
             },
         );
     }
+}
+
+fn draw_ops() {
+    
 }
