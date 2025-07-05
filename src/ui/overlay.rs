@@ -1,7 +1,10 @@
 use crate::{core::calculator::Calculator, types::tag::UiTag};
 use eframe::{
     App,
-    egui::{self, Align2, Color32, FontFamily, Pos2, Stroke, ViewportBuilder, ViewportId},
+    egui::{
+        self, Align2, Color32, CornerRadius, FontFamily, Pos2, Stroke, TextureOptions,
+        ViewportBuilder, ViewportId, load::SizedTexture,
+    },
 };
 use getset::{Getters, Setters};
 use std::sync::{Arc, Mutex};
@@ -15,6 +18,7 @@ pub struct Overlay {
     display_overlay: bool,
     fullscreen: bool,
     calculator: Arc<Mutex<Calculator>>,
+    show_tag_boxes: bool,
 }
 
 impl Overlay {
@@ -27,6 +31,7 @@ impl Overlay {
             overlay_viewport_id: ViewportId::from_hash_of("Overlay"),
             display_overlay: false,
             fullscreen: false,
+            show_tag_boxes: true,
         }
     }
 }
@@ -90,9 +95,28 @@ impl App for Overlay {
                             );
                         }
 
-                        for res in calc_clone.lock().unwrap().evaluate(tags_clone.clone()) {
-                            ui.label(format!("{:?}", res));
-                        }
+                        ui.horizontal(|ui| {
+                            for (i, res) in calc_clone.lock().unwrap().evaluate(tags_clone.clone()).iter().enumerate() {
+                                for op in res.obtainable_operators() {
+                                    if i & 20 == 0 && i != 0 {
+                                        ui.end_row();
+                                    }
+                                    let texture_handle = ctx.load_texture(
+                                        op.id(),
+                                        op.avatar().clone(),
+                                        TextureOptions::default(),
+                                    );
+                                    ui.add(
+                                        egui::widgets::Image::new(SizedTexture::from_handle(
+                                            &texture_handle,
+                                        ))
+                                        .corner_radius(CornerRadius::same(255))
+                                        .maintain_aspect_ratio(true)
+                                        .max_height(50.0),
+                                    );
+                                }
+                            }
+                        });
                     });
                 ctx.request_repaint();
             },
@@ -100,6 +124,4 @@ impl App for Overlay {
     }
 }
 
-fn draw_ops() {
-    
-}
+fn draw_ops() {}
