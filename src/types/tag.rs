@@ -684,7 +684,7 @@ fn tag_button_to_string(
     imgproc::threshold(
         &cropped,
         &mut threshed,
-        160.0,
+        120.0,
         255.0,
         imgproc::THRESH_BINARY,
     )?;
